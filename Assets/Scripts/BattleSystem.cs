@@ -13,8 +13,8 @@ public class BattleSystem : MonoBehaviour
 
     public Text DialogueText;
 
-    public battlehud playerHUD;
-    public battlehud enemyHUD;
+    public BattleHUD playerHUD;
+    public BattleHUD enemyHUD;
 
     public Transform playerBattleStation;
     public Transform enemyBattlestation;

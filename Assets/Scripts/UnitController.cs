@@ -12,6 +12,9 @@ public class UnitController : MonoBehaviour
     public int maxHP;
     public int currentHP;
 
+    public int currentMP;
+    public int maxMP;
+
     public bool TakeDamage(int dmg)
     {
         currentHP -= dmg;
