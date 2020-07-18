@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbcd7062021bc9c44ac5b68f11c71690, type: 3}
   m_Name: Potion
   m_EditorClassIdentifier: 
-  itemName: 
-  itemDescription: 
-  value: 0
-  type: {fileID: 0}
+  itemName: 'Potion '
+  itemDescription: Recover 30 hp scrub
+  maxQuantity: 99
+  itemPrefab: {fileID: 0}
+  value: 30
+  type: {fileID: 11400000, guid: ae99e358523a13b49941a810300fe21a, type: 2}

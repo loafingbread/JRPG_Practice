@@ -9,6 +9,7 @@ public abstract class ItemRecipe : ScriptableObject
 {
     public string itemName;
     public string itemDescription;
+    public int maxQuantity = 99;
     public GameObject itemPrefab;
 
     /**

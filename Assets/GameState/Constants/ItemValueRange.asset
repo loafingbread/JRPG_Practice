@@ -9,12 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbcd7062021bc9c44ac5b68f11c71690, type: 3}
-  m_Name: Ether
+  m_Script: {fileID: 11500000, guid: a31c6ecb07614064dad2c2131db76a09, type: 3}
+  m_Name: ItemValueRange
   m_EditorClassIdentifier: 
-  itemName: Ether
-  itemDescription: Recover 25 mp
-  maxQuantity: 99
-  itemPrefab: {fileID: 0}
-  value: 25
-  type: {fileID: 11400000, guid: 8c1e3ad8a1883884eb37446d9b12c06a, type: 2}
+  defaultValue: 0
+  maxValue: 99
+  minValue: 0
