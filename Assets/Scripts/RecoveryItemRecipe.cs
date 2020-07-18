@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName="RecoveryItem", menuName = "Items/Recovery")]
-public class RecoveryItem : Item
+public class RecoveryItemRecipe : ItemRecipe
 {
     public int value;
     public ResourceType type;

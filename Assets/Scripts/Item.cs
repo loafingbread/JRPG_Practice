@@ -1,26 +1,44 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-/**
- * <summary>Base item asset template to subclass all other item assets
- * from.</summary>
- */
-public abstract class Item : ScriptableObject
+public class Item 
 {
-    public string itemName;
-    public string itemDescription;
+    // Item's default property values from its recipe
+    public ItemRecipe recipe;
+    public string itemName { get { return recipe.itemName; } }
+    public string itemDescription { get { return recipe.itemDescription; } }
+
+    // Keep track of Item's per instance properties
+    public int quantity { get; set; } = 0;
+
+    /***************************************************************************
+     * Item Recipe defined methods
+     **************************************************************************/
     /**
-     * <summary>Use item on user.</summary>
-     * <param name="user">Object that will use item.</param>
-     * <returns>Number of items used.</returns>
+     * <summary>Use item on user</summary>
+     * <param name="user">Unit using item</param>
      */
-    public abstract int UseItem(UnitController user);
+    public void UseItem(UnitController user)
+    {
+        int numUsed = recipe.UseItem(user);
+    }
 
     /**
-     * <summary>Have user use item(s) on target(s).</summary>
-     * <param name="user">Object that will use item(s).</param>
-     * <param name="targets">Target(s) to use items on.</param>
-     * <returns>Number of items used.</returns>
+     * <summary>Use item on target(s)</summary>
+     * <param name="user">Unit using item</param>
+     * <param name="target">Item's targets</param>
      */
-    public abstract int UseItem(UnitController user, List<UnitController> targets);
+    public void UseItem(UnitController user, List<UnitController> targets)
+    {
+        int numUsed = recipe.UseItem(user, targets);
+    }
+
+    /**
+     * <summary>Render item icon</summary>
+     */
+    public void RenderItem()
+    {
+        recipe.RenderItem();
+    }
 }
