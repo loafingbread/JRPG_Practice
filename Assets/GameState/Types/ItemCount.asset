@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a31c6ecb07614064dad2c2131db76a09, type: 3}
-  m_Name: ItemValueRange
+  m_Script: {fileID: 11500000, guid: 19359d8ba9358e6418732490d29c7359, type: 3}
+  m_Name: ItemCount
   m_EditorClassIdentifier: 
-  defaultValue: 0
-  maxValue: 99
   minValue: 0
+  maxValue: 0
+  defaultValue: 0

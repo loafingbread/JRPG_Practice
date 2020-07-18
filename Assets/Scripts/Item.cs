@@ -6,18 +6,16 @@ public class Item
 {
     // Item's default property values from its recipe
     private ItemRecipe recipe;
-    private ValueRangeType itemCountRange;
     public string itemName { get { return recipe.itemName; } }
     public string itemDescription { get { return recipe.itemDescription; } }
 
     // Keep track of Item's per instance properties
     public int count { get; set; }
 
-    public Item(ItemRecipe recipe, ValueRangeType itemCountRange, int count = 0)
+    public Item(ItemRecipe recipe, int count = -1)
     {
         this.recipe = recipe;
-        this.itemCountRange = itemCountRange;
-        this.count = count;
+        this.count = count == - 1 ? recipe.itemCountRange.defaultValue : count;
     }
 
     /***************************************************************************
@@ -28,7 +26,7 @@ public class Item
      */
     public bool IsUsable()
     {
-        return count > itemCountRange.minValue ? true : false;
+        return count > recipe.itemCountRange.minValue ? true : false;
     }
 
     /**
@@ -38,6 +36,7 @@ public class Item
     public void UpdateCount(int amount)
     {
         int newCount = count + amount;
+        ResourceType itemCountRange = recipe.itemCountRange;
         if (newCount < itemCountRange.maxValue && newCount > itemCountRange.minValue)
         {
             // New count is in correct bounds, update it
