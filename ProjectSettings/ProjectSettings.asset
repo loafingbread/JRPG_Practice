@@ -539,8 +539,8 @@ PlayerSettings:
   webGLThreadsSupport: 0
   webGLWasmStreaming: 0
   scriptingDefineSymbols:
-    1: USE_TIMELINE
-    13: USE_TIMELINE
+    1: USE_TIMELINE;USE_TWINE;USE_CINEMACHINE;TMP_PRESENT
+    13: USE_TIMELINE;USE_TWINE;USE_CINEMACHINE;TMP_PRESENT
   platformArchitecture: {}
   scriptingBackend: {}
   il2cppCompilerConfiguration: {}

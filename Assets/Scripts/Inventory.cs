@@ -7,5 +7,8 @@ public class Inventory : ScriptableObject
 {
     public int money;
     public List<ItemRecipe> itemRecipes = new List<ItemRecipe>();
-    public List<Item> consumables = new List<Item>();    
+    public ItemRecipe itemRecipe;
+    public Item item;
+    [SerializeField]
+    public ItemRecipeMap consumables = new ItemRecipeMap();    
 }

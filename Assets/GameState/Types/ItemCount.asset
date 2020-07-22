@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: ItemCount
   m_EditorClassIdentifier: 
   minValue: 0
-  maxValue: 0
+  maxValue: 99
   defaultValue: 0
