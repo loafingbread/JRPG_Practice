@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 /**
@@ -10,6 +11,7 @@ public abstract class ItemRecipe : ScriptableObject
     public string itemName;
     public string itemDescription;
     public int maxQuantity = 99;
+    public int itemCost;
     public GameObject itemPrefab;
     public ResourceType itemCountRange;
 
@@ -35,4 +37,11 @@ public abstract class ItemRecipe : ScriptableObject
     {
         Instantiate(itemPrefab);
     }
+
+    public int ItemCost(int desiredAmount)
+    {
+        return desiredAmount * itemCost;
+        
+    }
+
 }

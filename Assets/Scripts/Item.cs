@@ -12,7 +12,7 @@ public class Item
 
     // Keep track of Item's per instance properties
     public int count { get; set; }
-
+    // -1 is the default value, and if it is at -1, that means no count was passed in. 
     public Item(ItemRecipe recipe, int count = -1)
     {
         this.recipe = recipe;
@@ -25,6 +25,10 @@ public class Item
     /**
      * <returns>Whether item is usable or not.</returns>
      */
+
+    //minValue is usually set to 0, and default value for the count variable is set also set to 0. 
+    // if count is greater than min, the item is usable. Otherwise, it isn't. 
+    // Basically, you can't use an item if you have 0 of the item. 
     public bool IsUsable()
     {
         return count > recipe.itemCountRange.minValue ? true : false;
@@ -61,6 +65,8 @@ public class Item
      * <summary>Use item on user</summary>
      * <param name="user">Unit using item</param>
      */
+
+    //This is the method we'd use for the Item button
     public void UseItem(UnitController user)
     {
         if (IsUsable())
