@@ -12,12 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed88ab73ac3e7d84ea9aee96343ee97c, type: 3}
   m_Name: PlayerInventory
   m_EditorClassIdentifier: 
-  money: 0
-  itemRecipes:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  itemRecipe: {fileID: 11400000, guid: f4a30fa257a107d4fb816d7328872c12, type: 2}
-  consumables:
-    keys: []
-    values: []
+  itemRecipes: {fileID: 11400000, guid: e269e3d4fd600114fb539ef12d42b314, type: 2}
+  money: 3000
+  consumables: []

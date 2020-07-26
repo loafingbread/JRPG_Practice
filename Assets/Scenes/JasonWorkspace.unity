@@ -1267,6 +1267,7 @@ MonoBehaviour:
     type: 3}
   enemyPrefab: {fileID: 1673941530315701216, guid: 7de1ea1c5ebc05a45b386f26922d1a97,
     type: 3}
+  playerInventory: {fileID: 11400000, guid: f70c0e56c5b55934cb72a618b03401ec, type: 2}
   DialogueText: {fileID: 875669641}
   playerHUD: {fileID: 361807878}
   enemyHUD: {fileID: 1882463793}

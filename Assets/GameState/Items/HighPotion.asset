@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemName: High Potion
   itemDescription: Wow you got beat real bad, recovery 60 hp
-  maxQuantity: 99
+  itemCost: 200
   itemPrefab: {fileID: 0}
+  itemCountRange: {fileID: 11400000, guid: 385090436dd1f4649b22ed39b1ed7261, type: 2}
+  itemRecipes: {fileID: 11400000, guid: e269e3d4fd600114fb539ef12d42b314, type: 2}
   value: 60
   type: {fileID: 11400000, guid: ae99e358523a13b49941a810300fe21a, type: 2}
