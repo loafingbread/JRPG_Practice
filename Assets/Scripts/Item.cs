@@ -9,6 +9,7 @@ public class Item
     private ItemRecipe recipe;
     public string itemName { get { return recipe.itemName; } }
     public string itemDescription { get { return recipe.itemDescription; } }
+    public int baseCost { get { return recipe.itemCost; } }
 
     // Keep track of Item's per instance properties
     public int count { get; set; }

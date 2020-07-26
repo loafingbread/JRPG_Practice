@@ -5,8 +5,8 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "Inventory", menuName = "Inventory")]
 public class Inventory : ScriptableObject
-{ 
-    public List<ItemRecipe> itemRecipes = new List<ItemRecipe>();
+{
+    public ItemRecipeSet itemRecipes;
     //Game save Data
     public int money;
     

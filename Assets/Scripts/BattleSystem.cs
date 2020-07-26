@@ -10,6 +10,7 @@ public class BattleSystem : MonoBehaviour
 {
     public GameObject playerPrefab;
     public GameObject enemyPrefab;
+    public Inventory playerInventory;
 
     public Text DialogueText;
 

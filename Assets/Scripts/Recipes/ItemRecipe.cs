@@ -10,10 +10,34 @@ public abstract class ItemRecipe : ScriptableObject
 {
     public string itemName;
     public string itemDescription;
-    public int maxQuantity = 99;
     public int itemCost;
     public GameObject itemPrefab;
     public ResourceType itemCountRange;
+    public ItemRecipeSet itemRecipes;
+
+    protected void OnEnable()
+    {
+        UnityEngine.Debug.Log("onEnable: " + name);
+
+        if (itemRecipes)
+        {
+            itemRecipes.Add(this);
+        }
+    }
+
+    /**
+     * <summary>On disable (usually when destroyed/out of scope), remove
+     * item recipe from shared list of item recipes.</summary>
+     */
+    protected void OnDisable()
+    {
+        UnityEngine.Debug.Log("onDisable: " + name);
+
+        if (itemRecipes)
+        {
+            itemRecipes.Remove(this);
+        }
+    }
 
     /**
      * <summary>Use item on user.</summary>
