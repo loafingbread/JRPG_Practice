@@ -17,8 +17,6 @@ public abstract class ItemRecipe : ScriptableObject
 
     protected void OnEnable()
     {
-        UnityEngine.Debug.Log("onEnable: " + name);
-
         if (itemRecipes)
         {
             itemRecipes.Add(this);
@@ -31,8 +29,6 @@ public abstract class ItemRecipe : ScriptableObject
      */
     protected void OnDisable()
     {
-        UnityEngine.Debug.Log("onDisable: " + name);
-
         if (itemRecipes)
         {
             itemRecipes.Remove(this);

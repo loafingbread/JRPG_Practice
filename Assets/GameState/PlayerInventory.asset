@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: PlayerInventory
   m_EditorClassIdentifier: 
   itemRecipes: {fileID: 11400000, guid: e269e3d4fd600114fb539ef12d42b314, type: 2}
+  playerInventoryDefaults: {fileID: 11400000, guid: 5a01c3d99d3d41740a95bf5fef6bef58,
+    type: 2}
   money: 3000
   consumables: []

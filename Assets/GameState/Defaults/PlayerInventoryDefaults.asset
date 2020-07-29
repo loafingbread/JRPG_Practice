@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cbf21f67505f3b4794f2d93aaef8b66, type: 3}
+  m_Name: PlayerInventoryDefaults
+  m_EditorClassIdentifier: 
+  itemRecipes:
+  - {fileID: 11400000, guid: f4a30fa257a107d4fb816d7328872c12, type: 2}
+  - {fileID: 11400000, guid: 6199f10d211ef6c43b0274a4c7326432, type: 2}
+  - {fileID: 11400000, guid: 49dccabe8cdb89144a24fdaea3ee6bfa, type: 2}
+  itemCounts: 010000000200000001000000

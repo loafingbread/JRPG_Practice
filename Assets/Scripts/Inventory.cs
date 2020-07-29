@@ -7,11 +7,29 @@ using UnityEngine;
 public class Inventory : ScriptableObject
 {
     public ItemRecipeSet itemRecipes;
+    public InventoryDefaults playerInventoryDefaults;
     //Game save Data
     public int money;
     
     public List<Item> consumables = new List<Item>();
-    
+
+    void OnEnable()
+    {
+        for (int i = 0; i < playerInventoryDefaults.itemRecipes.Count; i++)
+        {
+            // Add default items to inventory
+            ItemRecipe itemRecipe = playerInventoryDefaults.itemRecipes[i];
+            int itemCount = playerInventoryDefaults.itemCounts[i];
+            Item newItem = new Item(itemRecipe, itemCount);
+            consumables.Add(newItem);
+        }
+    }
+
+    void OnDisable()
+    {
+        consumables.Clear();
+    }
+
     public bool BuyItem(ItemRecipe item, int buyAmount)
     {
         int itemCost = item.ItemCost(buyAmount);
