@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,6 +8,7 @@ using UnityEngine.Events;
 public class BattleItemsMenu : MonoBehaviour
 {
     public Inventory playerInventory;
+    public BattleSystem battleSystem;
     public GameObject itemButton;
     private GridLayoutGroup gridLayout;
     private RectTransform rectTransform;
@@ -19,8 +21,21 @@ public class BattleItemsMenu : MonoBehaviour
             GameObject button = Instantiate(itemButton, gameObject.transform);
             button.transform.GetChild(0).gameObject.GetComponent<Text>().text = consumableItem.itemName;
             button.transform.GetChild(1).gameObject.GetComponent<Text>().text = consumableItem.count.ToString();
-            // button.GetComponent<UnityEvent>();
+            Button buttonComponent = button.GetComponent<Button>();
+            buttonComponent.onClick.AddListener(OnItemButtonClick(consumableItem) );
         }
+    }
+
+    public UnityAction OnItemButtonClick(Item item)
+    {
+        return delegate ()
+        {
+            if (battleSystem)
+            {
+                battleSystem.OnPlayerUseItem(item);
+            }
+        };
+
     }
 
     public void Toggle()

@@ -137,4 +137,14 @@ public class BattleSystem : MonoBehaviour
         StartCoroutine(PlayerHeal());
     }
 
+    public void OnPlayerUseItem(Item item)
+    {
+        UnityEngine.Debug.Log("OnPlayerUseItem: " + item.itemName);
+        if (PlayerUnit)
+        {
+            item.UseItem(PlayerUnit);
+            playerHUD.SetHP(PlayerUnit.currentHP);
+        }
+    }
+
 }

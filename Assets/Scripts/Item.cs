@@ -70,6 +70,7 @@ public class Item
     //This is the method we'd use for the Item button
     public void UseItem(UnitController user)
     {
+        UnityEngine.Debug.Log("UseItem() ");
         if (IsUsable())
         {
             // Have enough of item, use it
